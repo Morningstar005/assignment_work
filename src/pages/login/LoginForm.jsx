@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   const [form, setForm] = useState({
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
-  const handleSubmit = async(e)=>{
-    e.preventDefault()
-  console.log('handleSubmit',form)
-  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("handleSubmit", form);
+  };
   return (
     <div className="max-w-md mx-auto  p-8 rounded-lg ">
       <form onSubmit={handleSubmit}>
@@ -42,13 +42,13 @@ const LoginForm = () => {
             Password
           </label>
           <input
-           type="password"
-           id="password"
-           name="password" // Add name attribute
-           className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-           placeholder="Enter your password"
-           value={form.password}
-           onChange={handleChange}
+            type="password"
+            id="password"
+            name="password" // Add name attribute
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            placeholder="Enter your password"
+            value={form.password}
+            onChange={handleChange}
           />
         </div>
         <button
@@ -57,15 +57,13 @@ const LoginForm = () => {
         >
           Sign In
         </button>
-
       </form>
-      <div className='mt-2 flex justify-end gap-2'>
-        <span className='font-semibold'>Don’t have an account?</span>
+      <div className="mt-2 flex justify-end gap-2">
+        <span className="font-semibold">Don’t have an account?</span>
 
-        <Link to="/signup" className='font-bold'>
-  Sign Up
-</Link>
-
+        <Link to="/signup" className="font-bold">
+          Sign Up
+        </Link>
       </div>
     </div>
   );
