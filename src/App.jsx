@@ -1,7 +1,5 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import PrivateRoute from './utils/authProtection.'
-import { Home, Login, Signup } from './pages'
 import routes from './utils/routes'
 
 const App = () => {
