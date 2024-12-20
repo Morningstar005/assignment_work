@@ -1,19 +1,36 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { loginUser } from "../../services/auth";
 
 const LoginForm = () => {
   const [form, setForm] = useState({
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("handleSubmit", form);
+    const { email, password } = form;
+    loginUser(email, password)
+      .then((res) => {
+        console.log("res", res.data.data.accessToken);
+        localStorage.setItem("accessToken", `${res.data.data.accessToken}`);
+        localStorage.setItem("refreshToken", `${res.data.data.refreshToken}`);
+        console.log("Navigating to /");
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log("error", err);
+      });
   };
+
   return (
     <div className="max-w-md mx-auto  p-8 rounded-lg ">
       <form onSubmit={handleSubmit}>
