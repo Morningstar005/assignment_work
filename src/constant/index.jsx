@@ -38,3 +38,18 @@ export const navbarText = [
   },
  
 ];
+
+
+export const topNavbarIcon = [
+  {
+    id: '3',
+    href: '/help',
+    icon: '/images/help.svg', // Path to the Help icon
+  },
+  {
+    id: '5',
+    href: '/settings',
+    icon: '/images/settings.svg', // Path to the Settings icon
+  },
+
+]
