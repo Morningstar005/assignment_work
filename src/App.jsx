@@ -9,10 +9,10 @@ const App = () => {
   const isAuthPage = location.pathname === "/login" || location.pathname === "/signup";
 
   return (
-    <div className="flex">
+    <div className="flex ">
     {!isAuthPage && <Sidebar />} 
     {!isAuthPage && <Navbar />} 
-    <div className={`ml-64 p-6 w-full ${isAuthPage ? "ml-0" : ""} bg-[#E9EDF1]`} >
+    <div className={` ${isAuthPage ? "ml-0" : "ml-64 p-6 w-full"} bg-[#E9EDF1]`} >
       <Routes>
         {routes.map(({ path, element }) => (
           <Route key={path} path={path} element={element} />

@@ -23,6 +23,8 @@ const LoginForm = () => {
         console.log("res", res.data.data.accessToken);
         localStorage.setItem("accessToken", `${res.data.data.accessToken}`);
         localStorage.setItem("refreshToken", `${res.data.data.refreshToken}`);
+        localStorage.setItem("name", `${res.data.data.user.name}`);
+
         console.log("Navigating to /");
         navigate("/");
       })

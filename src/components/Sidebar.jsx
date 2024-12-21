@@ -4,11 +4,6 @@ import { NavLink } from "react-router-dom";
 import { navbarText } from "../constant";
 
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false); // State for mobile menu toggle
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
     <div className="w-64 h-screen fixed top-0 left-0 bg-white p-4 z-50 ">
