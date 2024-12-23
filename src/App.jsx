@@ -12,7 +12,7 @@ const App = () => {
     <div className="flex ">
     {!isAuthPage && <Sidebar />} 
     {!isAuthPage && <Navbar />} 
-    <div className={` ${isAuthPage ? "ml-0" : "ml-64 p-6 w-full"} bg-[#E9EDF1]`} >
+    <div className={` ${isAuthPage ? "ml-0" : "ml-6 md:ml-64 p-6 w-full"} bg-[#E9EDF1]`} >
       <Routes>
         {routes.map(({ path, element }) => (
           <Route key={path} path={path} element={element} />

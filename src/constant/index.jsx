@@ -53,3 +53,22 @@ export const topNavbarIcon = [
   },
 
 ]
+
+export const cohortYears = [
+  "All",
+  "AY 2024-25",
+  "AY 2023-24",
+  "AY 2022-23",
+  "AY 2021-22"
+];
+
+export const courses = [
+  "All",
+  "BSE Math",
+  "BSE Science",
+  "BSE English",
+  "BSE History",
+  "BSE Geography",
+  "BSE Physics",
+  "BSE Chemistry"
+];

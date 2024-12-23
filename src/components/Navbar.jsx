@@ -21,13 +21,13 @@ const Navbar = () => {
   };
   return (
     
-<div className="fixed w-[100%] ml-1  text-black shadow-md z-40 bg-[#E9EDF1]">
-      <div className="flex items-center justify-between px-4 py-3">
+<div className="fixed w-[100%] -ml-[12rem] md:ml-1  text-black md:shadow-md z-40  md:bg-[#E9EDF1]">
+      <div className="flex items-center justify-between px-4 py-3 w-full ">
         <div className=" flex-1 flex justify-start ml-[17rem] ">
           <input
             type="text"
             placeholder="Search..."
-            className="w-[60%]  rounded-lg px-4 py-2 focus:outline-none"
+            className="w-[60%]  rounded-lg px-4 py-2 focus:outline-none hidden sm:block"
           />
         </div>
 
@@ -37,7 +37,7 @@ const Navbar = () => {
           </Link>
 
           <Link to="/settings" >
-          <img src='/images/settings.svg' alt={'settings'} className="mr-3 w-6 h-6" />
+          <img src='/images/settings.svg' alt={'settings'} className="mr-3 w-9 md:w-6 h-6" />
           </Link>
 
 <button className='bg-white px-3 py-2 rounded-md' onClick={handleClick}>Logout</button>
@@ -49,7 +49,7 @@ const Navbar = () => {
                 className="w-full h-full rounded-lg"
               />
             </div>
-            <span className="text-black font-bold">{storedName||'Adeline'}</span>
+            <span className="text-black font-bold text-[14px]">{storedName||'Adeline'}</span>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import axios from "axios";
-export const baseUrl = "http://13.234.71.136:8550/api/";
+export const baseUrl = "https://www.xbunicorn.com/api/";
 
 export const baseAPI = axios.create({
   baseURL: baseUrl,
