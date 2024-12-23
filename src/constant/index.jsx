@@ -2,7 +2,7 @@ export const navbarText = [
   {
     id: '1',
     name: 'Dashboard',
-    href: '/',
+    href: '/home',
     icon: '/images/dashboard.svg', // Path to the Dashboard icon
   },
   {
