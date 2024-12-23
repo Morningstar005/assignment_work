@@ -22,7 +22,6 @@ const SignForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("handleSubmit", form);
     const { name, email, password, confirmPassword } = form;
 
     if (password !== confirmPassword) {
@@ -32,11 +31,9 @@ const SignForm = () => {
     }
 
     registerUser(name,email,password).then(res=>{
-      console.log('res',res)
       toast.success('complete')
       navigate('/login');
     }).catch(err=>{
-      console.log('error',err.response.data.message)
       setError(err.response.data.message)
     setErrordiv(true)
     })

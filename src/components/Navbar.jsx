@@ -9,7 +9,6 @@ const Navbar = () => {
   const handleClick = () => {
     signout()
       .then((response) => {
-        console.log("Logout successful:", response);
         localStorage.removeItem("accessToken");
         localStorage.removeItem("refreshToken");
         navigate("/login");

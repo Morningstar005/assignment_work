@@ -7,7 +7,6 @@ export async function registerUser(name, email, password) {
       email: email,
       password,
     });
-    console.log("response", response);
     return response;
   } catch (error) {
     throw error;
@@ -20,7 +19,6 @@ export async function loginUser(email, password) {
       email: email,
       password,
     });
-    console.log("response", response);
     return response;
   } catch (error) {
     throw error;

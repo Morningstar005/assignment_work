@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { createStudent } from "../services/students";
+import { cohortYears } from "../constant";
 
 const AddStudentModal = ({ isOpen, onClose }) => {
   const [newStudent, setNewStudent] = useState({
@@ -17,12 +18,10 @@ const AddStudentModal = ({ isOpen, onClose }) => {
   };
 
   const handleAddStudent = () => {
-    console.log("Adding new student:", newStudent);
 
     // Call the createStudent API
     createStudent(newStudent)
       .then((createdStudent) => {
-        console.log("New student added successfully:", createdStudent);
         window.location.reload();
 
         // Close the modal or reset state as needed
@@ -58,9 +57,11 @@ const AddStudentModal = ({ isOpen, onClose }) => {
               onChange={handleInputChange}
               className="w-full border border-gray-300 px-2 py-1 rounded-md"
             >
-              <option value="AY 2024-25">AY 2024-25</option>
-              <option value="AY 2023-24">AY 2023-24</option>
-              {/* Add more cohort years as needed */}
+              {cohortYears.map((cohort) => (
+                <option key={cohort} value={cohort}>
+                  {cohort}
+                </option>
+              ))}
             </select>
           </div>
 

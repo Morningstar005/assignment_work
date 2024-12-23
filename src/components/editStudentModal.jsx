@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { editStudent } from "../services/students";
+import { cohortYears } from "../constant";
 // import { updateStudent } from "../services/students"; // API to update a student
 
 const EditStudentModal = ({ isOpen, onClose, student }) => {
@@ -28,13 +29,10 @@ const EditStudentModal = ({ isOpen, onClose, student }) => {
   };
 
   const handleUpdateStudent = () => {
-    console.log('student',student)
-    console.log("Updating student:", updatedStudent);
 
     editStudent(student.id, updatedStudent)
       .then((response) => {
-        console.log("Student updated successfully:", response);
-        // window.location.reload(); // Optional: Reload to fetch the updated data
+        window.location.reload(); // Optional: Reload to fetch the updated data
         onClose();
       })
       .catch((error) => {
@@ -67,8 +65,11 @@ const EditStudentModal = ({ isOpen, onClose, student }) => {
               onChange={handleInputChange}
               className="w-full border border-gray-300 px-2 py-1 rounded-md"
             >
-              <option value="AY 2024-25">AY 2024-25</option>
-              <option value="AY 2023-24">AY 2023-24</option>
+              {cohortYears.map((cohort) => (
+                                <option key={cohort} value={cohort}>
+                                  {cohort}
+                                </option>
+                              ))}
             </select>
           </div>
 

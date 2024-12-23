@@ -16,20 +16,16 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("handleSubmit", form);
     const { email, password } = form;
     loginUser(email, password)
       .then((res) => {
-        console.log("res", res.data.data.accessToken);
         localStorage.setItem("accessToken", `${res.data.data.accessToken}`);
         localStorage.setItem("refreshToken", `${res.data.data.refreshToken}`);
         localStorage.setItem("name", `${res.data.data.user.name}`);
 
-        console.log("Navigating to /");
         navigate("/");
       })
       .catch((err) => {
-        console.log("error", err);
       });
   };
 

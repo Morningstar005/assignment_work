@@ -30,15 +30,12 @@ const Home = () => {
   };
 
   const deleteModal = (student) => {
-    console.log();
     deleteStudent(student.id).then(res=>{
               window.location.reload(); // Optional: Reload to fetch the updated data
 
-      console.log('delete')
       // toast.error(`delete student ${student.name}`)
     }).catch(error=>{
       // toast.error(`can't delete student ${student.name}`)
-      console.log('error',error)
 
     })
   };
@@ -55,11 +52,9 @@ const Home = () => {
           lastLogin: new Date(student.lastLogin).toLocaleString(), // Format lastLogin
           status: getRandomStatus(), // Assign random status
         }));
-        console.log("transformedData", transformedData);
         setStudents(transformedData);
       })
       .catch((error) => {
-        console.log("error", error);
       });
     setIsLoading(false);
   }, []);
@@ -149,7 +144,6 @@ const Home = () => {
                 </thead>
                 <tbody>
                   {filteredStudents.map((student, index) => {
-                    console.log("student", student);
                     return (
                       <tr key={index} className="border-b hover:bg-gray-50">
                         {/* Student Name */}

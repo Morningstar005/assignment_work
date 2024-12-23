@@ -30,7 +30,6 @@ export async function createStudent(studentData) {
 export async function editStudent(id,studentData) {
   try {
     const response = await api.put(`student/${id}`, studentData); // Use the `api` instance for the POST request
-console.log("response",response)
     return response.data; // Return the created student data
   } catch (error) {
     console.error("Error creating student:", error);
@@ -40,7 +39,6 @@ console.log("response",response)
 export async function deleteStudent(id) {
   try {
     const response = await api.delete(`student/${id}`); // Use the `api` instance for the POST request
-console.log("response",response)
     return response.data; // Return the created student data
   } catch (error) {
     console.error("Error creating student:", error);
