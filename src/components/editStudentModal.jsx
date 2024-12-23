@@ -43,7 +43,7 @@ const EditStudentModal = ({ isOpen, onClose, student }) => {
   return (
     isOpen && (
       <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 backdrop-blur-sm ">
-        <div className="bg-white p-9 rounded-md shadow-md w-[40%]">
+        <div className="bg-white p-9 rounded-md shadow-md w-[70%] md:w-[40%]">
           <h2 className="text-xl font-semibold mb-4">Edit Student</h2>
 
           <div className="mb-4">

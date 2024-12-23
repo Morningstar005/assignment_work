@@ -35,7 +35,7 @@ const AddStudentModal = ({ isOpen, onClose }) => {
   return (
     isOpen && (
       <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 backdrop-blur-sm w-[20]">
-        <div className="bg-white p-9 rounded-md shadow-md w-[50%] ">
+        <div className="bg-white p-9 rounded-md shadow-md  w-[70%] md:w-[40%] ">
           <h2 className="text-xl font-semibold mb-4">Add New Student</h2>
 
           <div className="mb-4">
