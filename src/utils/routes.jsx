@@ -4,10 +4,10 @@ import PrivateRoute from "./authProtection.";
 // import Chapter from "../pages/chapter/Chapter";
 
 const routes = [
-  { path: "/login", element: <Login /> },
+  { path: "/", element: <Login /> },
   { path: "/signup", element: <Signup /> },
   {
-    path: "/",
+    path: "/home",
     element: (
       <PrivateRoute>
         <Home />

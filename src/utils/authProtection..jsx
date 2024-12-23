@@ -32,11 +32,11 @@ const PrivateRoute = ({ children }) => {
         if (newAccessToken) {
           setIsAuthenticated(true);
         } else {
-          navigate("/login");
+          navigate("/");
         }
       });
     } else {
-      navigate("/login");
+      navigate("/");
     }
   }, [navigate]);
 
@@ -46,7 +46,7 @@ const PrivateRoute = ({ children }) => {
   }
 
   // Return the children (protected routes) or redirect to login
-  return isAuthenticated ? children : <Navigate to="/login" />;
+  return isAuthenticated ? children : <Navigate to="/" />;
 };
 
 export default PrivateRoute;

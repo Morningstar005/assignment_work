@@ -23,7 +23,7 @@ const LoginForm = () => {
         localStorage.setItem("refreshToken", `${res.data.data.refreshToken}`);
         localStorage.setItem("name", `${res.data.data.user.name}`);
 
-        navigate("/");
+        navigate("/home");
       })
       .catch((err) => {
       });

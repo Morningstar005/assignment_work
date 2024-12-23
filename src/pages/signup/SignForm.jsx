@@ -32,7 +32,7 @@ const SignForm = () => {
 
     registerUser(name,email,password).then(res=>{
       toast.success('complete')
-      navigate('/login');
+      navigate('/');
     }).catch(err=>{
       setError(err.response.data.message)
     setErrordiv(true)

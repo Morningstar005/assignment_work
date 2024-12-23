@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar"
 const App = () => {
   const location = useLocation(); // Get the current location/path
 
-  const isAuthPage = location.pathname === "/login" || location.pathname === "/signup";
+  const isAuthPage = location.pathname === "/" || location.pathname === "/signup";
 
   return (
     <div className="flex ">
