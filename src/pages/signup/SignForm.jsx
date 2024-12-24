@@ -120,7 +120,7 @@ const SignForm = () => {
       <div className="mt-2 flex justify-end gap-2">
         <span className="font-semibold">Do you have an account?</span>
 
-        <Link to="/login" className="font-bold">
+        <Link to="/" className="font-bold">
           Sign In
         </Link>
       </div>
